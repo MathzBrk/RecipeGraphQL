@@ -1,0 +1,25 @@
+{
+  "name": "recipe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  "start": "nodemon --ext ts --exec ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "apollo-server": "^3.13.0",
+    "class-validator": "^0.14.1",
+    "graphql": "^16.10.0",
+    "graphql-scalars": "^1.24.1",
+    "reflect-metadata": "^0.2.2",
+    "type-graphql": "^2.0.0-rc.2",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
