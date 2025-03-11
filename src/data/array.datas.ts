@@ -1,16 +1,19 @@
-import { Author } from "../domain/author/type/author.type";
-import { Recipe } from "../domain/recipe/type/recipe.type";
+
+import { Author } from "../domain/author/schema/type/author.type";
+import { Recipe } from "../domain/recipe/schema/type/recipe.type";
 
 const authors: Author[] = [
   {
     id: 1,
     name: "João Silva",
     email: "joao@example.com",
+    recipes: []
   },
   {
     id: 2,
     name: "Maria Oliveira",
     email: "maria@example.com",
+    recipes: []
   },
 ];
 

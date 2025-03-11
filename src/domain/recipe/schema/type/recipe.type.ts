@@ -1,6 +1,7 @@
 import { Field, ID, ObjectType } from "type-graphql";
-import {Author} from "../../author/type/author.type"
+
 import { IsNotEmpty, IsOptional } from "class-validator";
+import { Author } from "../../../author/schema/type/author.type";
 
 @ObjectType()
 export class Recipe {
@@ -11,11 +12,11 @@ export class Recipe {
     @Field()
     title: string;
 
-    @Field()
+    @Field({nullable: true})
     description: string;
 
     @Field()
-    creationDate: Date;
+    creationDate: Date = new Date();
 
     @Field(() => [String!]!)
     ingredients: string[];

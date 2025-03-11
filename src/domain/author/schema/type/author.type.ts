@@ -1,5 +1,7 @@
-import { IsEmail, IsNotEmpty, IsString } from "class-validator";
+import { IsEmail, IsNotEmpty, IsOptional, IsString } from "class-validator";
 import { Field, ID, ObjectType } from "type-graphql";
+import { Recipe } from "../../../recipe/schema/type/recipe.type";
+
 
 @ObjectType()
 export class Author{
@@ -15,4 +17,7 @@ export class Author{
 
     @Field()
     email: string;
+
+    @Field(() => [Recipe])
+    recipes?: Recipe[] = [];
 }

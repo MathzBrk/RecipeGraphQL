@@ -13,9 +13,9 @@ export class RecipeInput {
     @Field()
     description: string;
     
-    @Field()
+    @Field({nullable: true})
     @IsOptional()
-    creationDate: Date = new Date();
+    creationDate: Date;
 
     @Field(() => [String!]!)
     ingredients: string[];
